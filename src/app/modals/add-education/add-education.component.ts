@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import swal from 'sweetalert';
+
 import { Educacion } from 'src/app/Educacion';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { NgbdModalContent1 } from '../education-modal/education-modal.component';
@@ -97,7 +97,7 @@ export class NgbdModalContent3 {
       
        
      ));   
-     swal("Exito!", "Datos guardados correctamente", "success");
+     alert("Exito! Datos cargados correctamente");
     
     this.activeModal.close();
     location.reload();

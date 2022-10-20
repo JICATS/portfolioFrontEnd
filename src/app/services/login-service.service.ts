@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import swal from 'sweetalert';
+
 
 import { Client } from '../Client';
 import { BehaviorSubject, catchError, Observable, throwError,map } from 'rxjs';
@@ -65,7 +65,7 @@ export class LoginServiceService {
 
       if(this.loggedIn){
 
-        swal("Exito!", "Usuario cargado correctamente", "success");
+        alert("Exito! Datos cargados correctamente");
         this.router.navigate(['/app-all-routes']);
         this.cookie.set("usuario",user1.usuario+'1fdsf12sf')
         
@@ -80,7 +80,7 @@ export class LoginServiceService {
 
     }),
       catchError((err)=>{
-        swal("Error!", "Usuario incorrecto o inexistente", "error");
+        alert("Error! Usuario incorrecto o inexistente");
         this.router.navigate(['/app-all-routes']);
         console.log(err);
 

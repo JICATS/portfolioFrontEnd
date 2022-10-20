@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import swal from 'sweetalert';
+
 
 import { LoginServiceService } from 'src/app/services/login-service.service';
 
@@ -141,7 +141,7 @@ export class NgbdModalContentDeleteProyect {
       
        
      ));   
-     swal("Exito!", "Datos cargados correctamente", "success");
+     alert("Exito! Datos cargados correctamente");
     
     this.activeModal.close();
     location.reload();

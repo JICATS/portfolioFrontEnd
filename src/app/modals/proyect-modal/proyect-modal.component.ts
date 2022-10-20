@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import swal from 'sweetalert';
+
 import { Habilidad } from 'src/app/Habilidad';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { NgbdModalContent3 } from '../add-education/add-education.component';
@@ -144,7 +144,7 @@ export class NgbdModalContentProyect {
       
        
      ));   
-     swal("Exito!", "Datos cargados correctamente", "success");
+     alert("Exito! Datos cargados correctamente");
      console.log("Este es el modal que agrrega")
     
     this.activeModal.close();
