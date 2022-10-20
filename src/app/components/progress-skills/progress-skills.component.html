@@ -1,0 +1,65 @@
+<div  *ngFor="let item of lista" >
+
+    <div  *ngIf="item.grado=='Básico'">
+            <input type="hidden" value={{item.id}}>
+            <label >Tipo: {{item.tipo}}</label>
+            <br>
+            <label>Habilidad: {{item.habilidad}}</label>
+            <br>
+            <label>Grado: {{item.grado}}</label>
+            <br>
+        <circle-progress
+
+            [percent]="33"
+            [radius]="40"
+            [outerStrokeWidth]="4"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+    </div>
+    <div  *ngIf="item.grado=='Intermedio'">
+            <input type="hidden" value={{item.id}}>
+            <label >Tipo: {{item.tipo}}</label>
+            <br>
+            <label>Habilidad: {{item.habilidad}}</label>
+            <br>
+            <label>Grado: {{item.grado}}</label>
+            <br>
+        <circle-progress
+
+            [percent]="66"
+            [radius]="40"
+            [outerStrokeWidth]="4"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+    </div>
+    <div  *ngIf="item.grado=='Avanzado'">
+            <input type="hidden" value={{item.id}}>
+            <label >Tipo: {{item.tipo}}</label>
+            <br>
+            <label>Habilidad: {{item.habilidad}}</label>
+            <br>
+            <label>Grado: {{item.grado}}</label>
+            <br>
+        <circle-progress
+
+            [percent]="100"
+            [radius]="40"
+            [outerStrokeWidth]="4"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+        ></circle-progress>
+    </div>
+
+</div>
+

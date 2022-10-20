@@ -1,0 +1,20 @@
+<div id="main-content">
+  <div class="tb" style="margin-top: 35px">
+    <div class="td" id="l-col">
+      <div class="l-cnt">
+        <div class="cnt-label">
+          <i class="l-i" id="l-i-i"></i>
+          <span>Proyectos</span>
+          <div *ngIf="cookieState" class="lb-action"> <ngbd-modal-component-proyect></ngbd-modal-component-proyect> </div>
+        </div>
+        <div id="i-box" *ngFor="let item of lista">
+          <input type="hidden" value={{item.id}}>
+          <div id="intro-line" >Nombre del proyecto: {{item.nombre}}</div>
+          <div id="u-occ">Descripción: {{item.descripcion}}</div>
+          <div id="intro-line">Fecha: {{item.fecha}}</div>
+          <div id="u-occ"><a [href]="item.link" target="_blank">{{item.link}}</a></div>
+          
+        </div>
+        
+        
+      </div>

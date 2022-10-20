@@ -1,0 +1,18 @@
+<div id="profile-d">
+    <div id="profile-pic">
+      <img [src]="imageUrl" >
+    </div>
+    
+    <div *ngFor="let item of lista" id="u-name" style="color:black;"> {{item.nombre}} </div>
+    <div class="tb" id="m-btns">
+      <div *ngIf="cookieState" class="td">
+        <label style="color: rgb(23, 176, 247); font-weight: bold;">Cambiar Foto</label>
+        <a   target="_blank" id="p-link2" wid (click)="valid()" >
+          <img src="/assets/img/camara.jpg">
+        </a> 
+        <div *ngIf="cameraState" class="m-btn"><input class="btn btn-outline-primary" type="file" #Image accept="image/*" (change)="handleFileInput($any($event.target).files)"></div>
+      </div>
+      
+    </div>
+    
+  </div>

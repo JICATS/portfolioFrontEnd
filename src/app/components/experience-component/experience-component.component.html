@@ -1,0 +1,27 @@
+<div id="main-content">
+    <div class="tb" style="margin-top: 35px">
+      <div class="td" id="l-col">
+        <div class="l-cnt">
+          <div class="cnt-label">
+            <i class="l-i" id="l-i-i"></i>
+            <span>Experiencia</span>
+            <div *ngIf="cookieState" class="lb-action"><ngbd-modal-component></ngbd-modal-component></div>
+          </div>
+          <div id="i-box" *ngFor="let item of lista">
+            <input type="hidden" value={{item.id}}>
+            <div id="intro-line" >{{item.puesto}}</div>
+            <div id="u-occ">{{item.periodo}}</div>
+            <div id="intro-line">{{item.descripcion}}</div>
+            
+            
+          </div>
+        </div>
+        
+
+
+
+
+  
+
+
+

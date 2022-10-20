@@ -1,0 +1,34 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="user">El usuario es su Email</label>
+        <input 
+            [(ngModel)]="binUsuario"
+            formControlName="user"
+            id="user"
+            type="text" 
+            class="form-control">
+            <div class="alert alert-danger" *ngIf="user.invalid && user.touched">Usuario es requerido</div>
+        <label for="name">Nombre y Apellido Completo</label>
+        <input 
+            [(ngModel)]="binNombre"
+            formControlName="name"
+            id="name"
+            type="text" 
+            class="form-control">
+            <div class="alert alert-danger" *ngIf="name.invalid && name.touched">Nombre y Apellido es requerido</div>
+            
+        
+    </div>
+    <div class="form-group">
+        <label for="hidepassword">Password</label>
+        <input 
+            [(ngModel)]="binSecretpassword"
+            formControlName="hidepassword"
+            id="hidepassword" 
+            type="password" 
+            class="form-control">
+            <div class="alert alert-danger" *ngIf="hidepassword.invalid && hidepassword.touched">Contraseña es requerida</div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" (click)="ver2()" >Create User</button>
+</form>
