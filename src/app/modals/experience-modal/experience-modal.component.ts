@@ -37,7 +37,7 @@ import { NgbdModalContentDelExp } from '../delete-experience/delete-experience.c
     
     <div class="modal-footer">
       
-      <button type="button" class="btn btn-outline-dark" (click)="addExperience()">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="addExperience()">Modificar</button>
       <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
       
       

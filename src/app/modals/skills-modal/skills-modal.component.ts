@@ -50,8 +50,8 @@ import { NgbdModalContentDelete } from '../delete-skill/delete-skill.component';
     
     <div class="modal-footer">
       
-      <button type="button" class="btn btn-outline-dark" (click)="addHabilidad()">Save</button>
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-outline-dark" (click)="addHabilidad()">Guardar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
       
       
     </div>

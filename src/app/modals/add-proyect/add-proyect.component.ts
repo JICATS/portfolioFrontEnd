@@ -43,7 +43,7 @@ import { Proyectos } from 'src/app/Proyectos';
     <div class="modal-footer">
       
       <button type="button" class="btn btn-outline-dark" (click)="addProyecto()">Guardar</button>
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
       
       
     </div>

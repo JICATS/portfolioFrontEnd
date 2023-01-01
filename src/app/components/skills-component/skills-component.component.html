@@ -3,9 +3,11 @@
     <div class="td" id="l-col">
       <div class="l-cnt">
         <div class="cnt-label">
+          <div *ngIf="cookieState" ><ngbd-modal-component-skill></ngbd-modal-component-skill>  </div>
+          <br>
           <i class="l-i" id="l-i-i"></i>
           <span>Soft Skills y Hard Skills</span>
-          <div *ngIf="cookieState" class="lb-action"> <ngbd-modal-component-skill></ngbd-modal-component-skill> </div>
+          
         </div>
         <div>
           

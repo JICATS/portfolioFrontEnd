@@ -1,13 +1,18 @@
 @import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
-* {
+
+
+  * {
     outline: none;
   }
   
+ @media only screen and(max-width:600px) {
   body {
     margin: 40px 0px;
     background-color: #f2f2f3;
   }
+  
+ }
   
   body,
   input,
@@ -21,6 +26,8 @@
     border: 0;
   }
   
+    
+  
   .tb {
     display: table;
     width: 100%;
@@ -29,7 +36,14 @@
   .tr {
     display: table-row;
   }
-  
+  @media screen and(max-width:414px) {
+
+    .td {
+      display: table-cell;
+      vertical-align:super;
+    }
+    
+  }
   .td {
     display: table-cell;
     vertical-align: middle;
@@ -87,6 +101,14 @@
   }
   
   /* Header */
+  @media screen and(max-width:414px){
+    header {
+      
+      background-color: #4267b2;
+      width: fit-content;
+    }
+
+  }
   header {
     padding: 15px 20px;
     background-color: #4267b2;
@@ -137,6 +159,17 @@
     font-size: 22px;
   }
   
+  @media screen and (max-width:414px) {
+
+    #f-name-l {
+      
+      color: #fff;
+      font-weight: bold;
+      white-space: pre;
+      
+    }
+    
+  }
   #f-name-l {
     width: 1px;
     color: #fff;
@@ -144,7 +177,13 @@
     white-space: pre;
     padding-right: 20px;
   }
-  
+  @media screen and(max-width:414px) {
+    #f-name-l span {
+      
+      border-right: 1px solid #35518b;
+    }
+    
+  }
   #f-name-l span {
     padding-right: 28px;
     border-right: 1px solid #35518b;
@@ -217,6 +256,7 @@
     
   }
   
+  
   #profile-d {
     position: absolute;
     left: 59px;
@@ -227,7 +267,7 @@
   }
   
   #profile-banner-image {
-    height: 360px;
+    height:auto;
     overflow: hidden;
     z-index: 1;
   }
@@ -236,7 +276,18 @@
     width: 100%;
     margin-top: -20%;
   }
-  
+  @media screen and (max-width:414px) {
+
+    #profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 3px;
+      margin-inline-start: auto;
+      
+      box-shadow: 0 0 0 5px #fff;
+    }
+    
+  }
   #profile-pic {
     width: 180px;
     height: 180px;
@@ -255,7 +306,7 @@
     top: 120px;
     left: 208px;
     color: #fff;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
   }
   
@@ -265,6 +316,13 @@
     bottom: 20px;
     width: 211px;
   }
+  #m-btnss {
+    position: relative;
+    right: -40px;
+    bottom: 320px;
+    width: 211px;
+  }
+
   
   #m-btns .td {
     padding: 0 8px;
@@ -960,3 +1018,5 @@
   }
   /* Footer finished */
   
+
+

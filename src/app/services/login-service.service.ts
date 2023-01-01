@@ -24,20 +24,39 @@ const httpOptions={
   providedIn: 'root'
 })
 export class LoginServiceService {
-  private getExpUrl = 'https://bkdpruebas.herokuapp.com/api/experience/';
-  private getEduUrl = 'https://bkdpruebas.herokuapp.com/api/education/';
-  private userUrl = 'https://bkdpruebas.herokuapp.com/log/login';
+  //Urls para pruebas locales
+
+  //private getExpUrl = 'http://localhost:8080/api/experience/';
+  //private getEduUrl = 'http://localhost:8080/api/education/';
+  //private userUrl = 'http://localhost:8080/log/login';
   
-  private loginUrl= 'https://bkdpruebas.herokuapp.com/log/login';
-  private getUserUrl='https://bkdpruebas.herokuapp.com/api/login';
-  private expUrl='https://bkdpruebas.herokuapp.com/api/experience/1';
-  private eduUrl='https://bkdpruebas.herokuapp.com/api/education/'; //aqui saque el 1 de la url para probar si funciona pasar el id
-  private habilUrl='https://bkdpruebas.herokuapp.com/api/habilidad/';
-  private proyectUrl='https://bkdpruebas.herokuapp.com/api/proyectos/';
-  private addEduUrl = 'https://bkdpruebas.herokuapp.com/api/education/';
-  private getHabilUrl='https://bkdpruebas.herokuapp.com/api/habilidad/';
-  private getProyectUrl='https://bkdpruebas.herokuapp.com/api/proyectos/';
-  private getMainDataUrl='https://bkdpruebas.herokuapp.com/api/mainData/';
+  //private loginUrl= 'http://localhost:8080/log/login';
+  //private getUserUrl='http://localhost:8080/api/login';
+  //private expUrl='http://localhost:8080/api/experience/1';
+  //private eduUrl='http://localhost:8080/api/education/'; //aqui saque el 1 de la url para probar si funciona pasar el id
+  //private habilUrl='http://localhost:8080/api/habilidad/';
+  //private proyectUrl='http://localhost:8080/api/proyectos/';
+  //private addEduUrl = 'http://localhost:8080/api/education/';
+  //private getHabilUrl='http://localhost:8080/api/habilidad/';
+  //private getProyectUrl='http://localhost:8080/api/proyectos/';
+  //private getMainDataUrl='http://localhost:8080/api/mainData/';
+
+  //Urls para pruebas remotas
+
+  private getExpUrl = 'https://aware-tamar-jicats.koyeb.app/api/experience/';
+  private getEduUrl = 'https://aware-tamar-jicats.koyeb.app/api/education/';
+  private userUrl = 'https://aware-tamar-jicats.koyeb.app/log/login';
+  
+  private loginUrl= 'https://aware-tamar-jicats.koyeb.app/log/login';
+  private getUserUrl='https://aware-tamar-jicats.koyeb.app/api/login';
+  private expUrl='https://aware-tamar-jicats.koyeb.app/api/experience/1';
+  private eduUrl='https://aware-tamar-jicats.koyeb.app/api/education/'; //aqui saque el 1 de la url para probar si funciona pasar el id
+  private habilUrl='https://aware-tamar-jicats.koyeb.app/api/habilidad/';
+  private proyectUrl='https://aware-tamar-jicats.koyeb.app/api/proyectos/';
+  private addEduUrl = 'https://aware-tamar-jicats.koyeb.app/api/education/';
+  private getHabilUrl='https://aware-tamar-jicats.koyeb.app/api/habilidad/';
+  private getProyectUrl='https://aware-tamar-jicats.koyeb.app/api/proyectos/';
+  private getMainDataUrl='https://aware-tamar-jicats.koyeb.app/api/mainData/';
 
   constructor(
     private http: HttpClient,
@@ -60,7 +79,7 @@ export class LoginServiceService {
   private loggedIn= new BehaviorSubject<boolean>(false);
 
   loginUser(user1:Client):Observable<Client>{
-    console.log(user1);
+    
     return this.http.post<Client>(this.loginUrl,user1,httpOptions).pipe(map((res:any)=>{
 
       if(this.loggedIn){

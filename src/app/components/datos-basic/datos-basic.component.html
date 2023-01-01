@@ -3,9 +3,11 @@
       <div class="td" id="l-col">
         <div class="l-cnt">
           <div class="cnt-label">
+            <div *ngIf="cookieState"  ><ngbd-modal-component-datos></ngbd-modal-component-datos></div>
+            <br>
             <i class="l-i" id="l-i-i"></i>
             <span>Información</span>
-            <div *ngIf="cookieState" class="lb-action"><ngbd-modal-component-datos></ngbd-modal-component-datos></div>
+            
           </div>
           <div id="i-box" *ngFor="let item of lista">
             <input type="hidden" value={{item.profesion}}>

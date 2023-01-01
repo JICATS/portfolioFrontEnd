@@ -18,7 +18,7 @@
               <a href="#" id="p-link">
                 <img src="/assets/img/profile.png">
               </a>
-              <div class="td" id="f-name-l"><span>Argentina Programa - #YoProgramo</span></div>
+              <div class="td" id="f-name-l"><p>Argentina Programa - #YoProgramo</p></div>
             </div>
             
           </div>
@@ -28,16 +28,22 @@
               <div class="td" id="m-td">
                 <div class="tb" style="margin: 20px;">
                   
-                  <span class="td"><button  class="btn btn-success"(click)="login()"> {{cookieState? 'Logout':'Login'}} </button></span>
-                  <div class="td">
-                    <a href="https://www.facebook.com/pyonerosoft" target="_blank" id="p-link" >
+                  <span class="td"><button [ngStyle]=" {'background':(cookieState? 'red':'green')} "  class="btn btn-success"(click)="login()"> {{cookieState? 'Logout':'Login'}} </button></span>
+                  
+                  <div class="tr">
+                    
+                    <p>Facebook<a href="https://www.facebook.com/pyonerosoft" target="_blank" id="p-link" >
                       <img src="/assets/img/facelogo.png">
+                      
                     </a>
+                    
+                  </p>
                   </div>
                   <div class="td">
-                    <a href="https://www.instagram.com/jorgeigcastillo/?hl=es-la" target="_blank" id="p-link">
+                    <p>Instagram<a href="https://www.instagram.com/jorgeigcastillo/?hl=es-la" target="_blank" id="p-link">
                       <img src="/assets/img/instalogo.jpg" >
                     </a>
+                  </p>
                   </div>
 
                   

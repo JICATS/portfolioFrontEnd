@@ -41,6 +41,9 @@ import { NgbdModalContentDeleteMainData } from './modals/delete-datos/delete-dat
 import { NgbdModalContentEditMainData } from './modals/edit-datos/edit-datos.component';
 import { NgbdModalContentAddExp } from './modals/add-experience/add-experience.component';
 import { NgbdModalContentDelExp } from './modals/delete-experience/delete-experience.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -99,7 +102,9 @@ import { NgbdModalContentDelExp } from './modals/delete-experience/delete-experi
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
     
   ],
   exports: [NgbdModalComponent,NgbdModalComponent1, NgbdModalComponent3,NgbdModalComponent4,NgbdModalComponentSkill,NgbdModalComponentProyect,NgbdModalComponentDatos],

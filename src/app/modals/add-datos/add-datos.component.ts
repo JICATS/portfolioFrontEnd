@@ -43,7 +43,7 @@ import { MainDatos } from 'src/app/MainDatos';
     <div class="modal-footer">
       
       <button type="button" class="btn btn-outline-dark" (click)="addMainDatos()">Guardar</button>
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
       
       
     </div>
